@@ -1,0 +1,241 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "tableId": 1,
+      "customer": "Armando",
+      "amountOfPeople": 5,
+      "moreChairs": 0
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "numberOfChairs": 2
+    },
+    {
+      "id": 2,
+      "numberOfChairs": 4
+    },
+    {
+      "id": 3,
+      "numberOfChairs": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "backgroundColor": "c96c3e",
+      "backgroundImage": "../../../assets/images/categories/hamburguer.png",
+      "fontFamily": "Satisfy",
+      "title": {
+        "name": "Seu Zé",
+        "fontSize": "30px",
+        "textAlign": "center",
+        "textDecoration": "underline",
+        "color": "black"
+      },
+      "subtitle": {
+        "name": "Hamburguers",
+        "fontSize": "20px",
+        "textAlign": "center",
+        "textDecoration": "none",
+        "color": "black"
+      }
+    },
+    {
+      "id": 2,
+      "backgroundColor": "aaaaad",
+      "backgroundImage": "../../../assets/images/categories/pastel.png",
+      "fontFamily": "Satisfy",
+      "title": {
+        "name": "Seu Zé",
+        "fontSize": "30px",
+        "textAlign": "center",
+        "textDecoration": "underline",
+        "color": "black"
+      },
+      "subtitle": {
+        "name": "Pastelaria",
+        "fontSize": "20px",
+        "textAlign": "center",
+        "textDecoration": "none",
+        "color": "black"
+      }
+    },
+    {
+      "id": 3,
+      "backgroundColor": "cf3917",
+      "backgroundImage": "../../../assets/images/categories/hotdog.png",
+      "fontFamily": "Satisfy",
+      "title": {
+        "name": "Seu Zé",
+        "fontSize": "30px",
+        "textAlign": "center",
+        "textDecoration": "underline",
+        "color": "black"
+      },
+      "subtitle": {
+        "name": "Hot Dog",
+        "fontSize": "20px",
+        "textAlign": "center",
+        "textDecoration": "none",
+        "color": "black"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Burguer de Frango",
+      "image": "../../../assets/images/categories/hamburguer-frango.png",
+      "price": 7.5,
+      "amount": 0,
+      "description": "Hambúrguer de frango, com pão artesanal, alface, tomate e queijo.",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Pastel de Carne",
+      "image": "../../../assets/images/categories/pastel-carne.png",
+      "price": 8.5,
+      "amount": 0,
+      "description": "Pastel de carne com queijo, massa recheada com carne temperada com alho, tomate, cheiro verde e azeitona.",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "Burguer de Carne",
+      "image": "../../../assets/images/categories/hamburguer.png",
+      "price": 7.5,
+      "amount": 0,
+      "description": "Hambúrguer, com pão artesanal, alface, tomate e queijo.",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Pastel de Frango",
+      "image": "../../../assets/images/categories/pastel-frango.png",
+      "price": 8.5,
+      "amount": 0,
+      "description": "Pastel de frango, temperado alho , sazon, tomate, coloral e cheiro verde",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Pastel de Queijo",
+      "image": "../../../assets/images/categories/pastel-queijo.png",
+      "price": 8.5,
+      "amount": 0,
+      "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+      "categoryId": 2
+    },
+    {
+      "id": 6,
+      "name": "Hot Dog Simples",
+      "image": "../../../assets/images/categories/hotdog.png",
+      "price": 8,
+      "amount": 0,
+      "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+      "categoryId": 3
+    },
+    {
+      "id": 7,
+      "name": "Hot Dog 2 Salsichas",
+      "image": "../../../assets/images/categories/hotdog-2.png",
+      "price": 10,
+      "amount": 0,
+      "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+      "categoryId": 3
+    },
+    {
+      "id": 8,
+      "name": "Hot Dog Prensado",
+      "image": "../../../assets/images/categories/hotdog-prensado.png",
+      "price": 12,
+      "amount": 0,
+      "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+      "categoryId": 3
+    }
+  ],
+  "accounts": [
+    {
+      "total": 20,
+      "products": [
+        {
+          "id": 6,
+          "name": "Hot Dog Simples",
+          "image": "../../../assets/images/categories/hotdog.png",
+          "price": 8,
+          "amount": 1,
+          "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+          "categoryId": 3
+        },
+        {
+          "id": 8,
+          "name": "Hot Dog Prensado",
+          "image": "../../../assets/images/categories/hotdog-prensado.png",
+          "price": 12,
+          "amount": 1,
+          "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+          "categoryId": 3
+        }
+      ],
+      "status": "EM ANDAMENTO",
+      "customer": {
+        "customer": "amanda",
+        "tableId": 2,
+        "amountOfPeople": "5",
+        "moreChairs": "5",
+        "id": 14
+      },
+      "id": 1
+    },
+    {
+      "total": 8,
+      "products": [
+        {
+          "id": 6,
+          "name": "Hot Dog Simples",
+          "image": "../../../assets/images/categories/hotdog.png",
+          "price": 8,
+          "amount": 1,
+          "description": "Pastel de queijo, temperado alho , sazon, tomate, coloral e cheiro verde",
+          "categoryId": 3
+        }
+      ],
+      "status": "EM ANDAMENTO",
+      "customer": {
+        "customer": "amanda",
+        "tableId": 2,
+        "amountOfPeople": "5",
+        "moreChairs": "5",
+        "id": 14
+      },
+      "id": 2
+    },
+    {
+      "total": 7.5,
+      "products": [
+        {
+          "id": 1,
+          "name": "Burguer de Frango",
+          "image": "../../../assets/images/categories/hamburguer-frango.png",
+          "price": 7.5,
+          "amount": 1,
+          "description": "Hambúrguer de frango, com pão artesanal, alface, tomate e queijo.",
+          "categoryId": 1
+        }
+      ],
+      "status": "EM ANDAMENTO",
+      "customer": {
+        "customer": "amanda",
+        "tableId": 2,
+        "amountOfPeople": "5",
+        "moreChairs": "5",
+        "id": 14
+      },
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "ilforno",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

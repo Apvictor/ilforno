@@ -1,0 +1,91 @@
+.cards {
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.card {
+    display: flex;
+    margin: 30px 15px;
+
+    .card-photo {
+        width: 30%;
+
+        margin-right: 10px;
+        background-size: cover;
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+
+    .card-infos {
+        width: 60%;
+        font-family: 'LilitaOne';
+
+        .card-infos-title {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .card-infos-price-and-qtde {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            .price {
+                color: #eb445a;
+            }
+
+            .buttons-qtde {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                .button-less {
+                    color: gray;
+                }
+
+                .button-more {
+                    color: #eb445a;
+                }
+
+                ion-icon {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .card-infos-description {
+            margin-bottom: 10px;
+            color: gray;
+        }
+    }
+}
+
+.text-wrap {
+    width: 205px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    ion-button {
+        width: 80%;
+        --background: #eb445a;
+        --border-radius: 20px;
+        text-transform: none;
+        font-family: "AlfaSlabOne";
+        color: #fff;
+        font-size: larger;
+        position: absolute;
+        bottom: -3.5rem;
+    }
+}

@@ -1,0 +1,38 @@
+<div class="header" [style]="'background-color: #'+categoria.backgroundColor+';'" *ngIf="terminouDeCarregar">
+  <div class="header-foto">
+    <div class="header-photo" [style]="'background-image: url('+categoria.backgroundImage+');'"></div>
+  </div>
+  <div class="top-buttons">
+    <div class="buttons back" (click)="goToScreen()">
+      <ion-icon name="chevron-back"></ion-icon>
+    </div>
+    <div class="texts" [style]="'font-family: '+ categoria.fontFamily +';'">
+
+      <ng-container *ngIf="categoria.title">
+        <p class="text-title"
+          [style]="'font-size:'+categoria.title.fontSize+'; text-align:'+categoria.title.textAlign+'; text-decoration:'+categoria.title.textDecoration+'; color:'+categoria.title.color+';'">
+          {{categoria.title.name}}
+        </p>
+      </ng-container>
+
+      <ng-container *ngIf="categoria.subtitle">
+        <p class="text-subtitle"
+          [style]="'font-size:'+categoria.subtitle.fontSize+'; text-align:'+categoria.subtitle.textAlign+'; text-decoration:'+categoria.subtitle.textDecoration+'; color:'+categoria.subtitle.color+';'">
+          {{categoria.subtitle.name}}
+        </p>
+      </ng-container>
+
+    </div>
+
+
+    <div class="buttons cart" *ngIf="accountsService.cartItemCount.value > 0 " (click)="goToScreen('account')">
+      <div class="count">{{accountsService.cartItemCount.value}}</div>
+      <ion-icon name="cart"></ion-icon>
+    </div>
+
+    <div class="buttons cart" *ngIf="accountsService.cartItemCount.value == 0 ">
+      <div class="count">{{accountsService.cartItemCount.value}}</div>
+      <ion-icon name="cart"></ion-icon>
+    </div>
+  </div>
+</div>

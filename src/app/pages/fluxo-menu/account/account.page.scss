@@ -1,0 +1,164 @@
+.header {
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+
+    p {
+        font-family: 'AlfaSlabOne';
+        font-size: 30px;
+    }
+
+    .top-buttons {
+        height: 30%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .buttons {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 2px solid rgba(255, 255, 255, 0.400);
+            border-radius: 50%;
+            color: white;
+            font-size: larger;
+        }
+
+        .cart {
+            position: relative;
+
+            .count {
+                height: 24px;
+                width: 24px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                position: absolute;
+                top: 25px;
+                color: white;
+                background-color: #eb445a;
+                border-radius: 50%;
+                font-size: small;
+            }
+        }
+    }
+}
+
+.total {
+    margin: 20px;
+    margin-bottom: 10px;
+    background-color: #081018;
+    border: 2px solid rgba(255, 255, 255, 0.400);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    font-family: 'LilitaOne';
+
+    .total-texts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 30px;
+        margin-bottom: 10px;
+
+        p {
+            color: white;
+        }
+
+        .total-price {
+            color: #eb445a;
+        }
+    }
+
+    p {
+        color: gray;
+    }
+}
+
+.cards {
+    height: 58%;
+    overflow-y: scroll;
+}
+
+.card {
+    display: flex;
+    margin: 10px 20px;
+    border-bottom: 1px solid #80808026;
+    padding-bottom: 5px;
+
+    .card-photo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .card-infos {
+        font-family: 'LilitaOne';
+        display: flex;
+        align-items: center;
+
+        .card-infos-price-and-qtde {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            .buttons-qtde {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                .button-less {
+                    color: gray;
+                }
+
+                .button-more {
+                    color: #eb445a;
+                }
+
+                ion-icon {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+.text-wrap {
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    ion-button {
+        width: 80%;
+
+        --background: #eb445a;
+        --border-radius: 20px;
+        text-transform: none;
+        font-family: 'AlfaSlabOne';
+        color: #fff;
+        font-size: larger;
+        position: absolute;
+        bottom: -3.5rem;
+    }
+}
+
+.price {
+    color: #eb445a;
+}

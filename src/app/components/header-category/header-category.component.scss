@@ -1,0 +1,69 @@
+.header {
+    height: 30%;
+
+    border-radius: 0 0 130px 130px;
+    padding: 10px;
+    position: relative;
+
+    .header-foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .header-photo {
+            height: 100%;
+            width: 50%;
+
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            bottom: 0px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-y: 80px;
+            background-position-x: center;
+        }
+    }
+}
+
+.top-buttons {
+    height: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .buttons {
+        width: 36px;
+        height: 36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid rgba(255, 255, 255, 0.400);
+        border-radius: 50%;
+        color: white;
+        font-size: larger;
+    }
+
+    .cart {
+        position: relative;
+
+        .count {
+            height: 24px;
+            width: 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 25px;
+            color: white;
+            background-color: #eb445a;
+            border-radius: 50%;
+            font-size: small;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<div class="categories" *ngIf="terminouDeCarregar">
+
+  <div class="categorie" (click)="goToScreen('product/' + categoria.id)" *ngFor="let categoria of categorias"
+    [style]="'background-color: #'+categoria.backgroundColor+';'">
+    
+    <ng-container *ngIf="categoria">
+
+      <div class="categorie-photo" [style]="'background-image:url('+categoria.backgroundImage+');'"></div>
+      <div class="categorie-texts" [style]="'font-family:'+categoria.fontFamily+';'">
+
+        <ng-container *ngIf="categoria.title">
+          <p class="categorie-text-title"
+            [style]="'font-size:'+categoria.title.fontSize+'; text-align:'+categoria.title.textAlign+'; text-decoration:'+categoria.title.textDecoration+'; color:'+categoria.title.color+';'">
+            {{categoria.title.name}}
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="categoria.subtitle">
+          <p class="categorie-text-subtitle"
+            [style]="'font-size:'+categoria.subtitle.fontSize+'; text-align:'+categoria.subtitle.textAlign+'; text-decoration:'+categoria.subtitle.textDecoration+'; color:'+categoria.subtitle.color+';'">
+            {{categoria.subtitle.name}}
+          </p>
+        </ng-container>
+      </div>
+
+    </ng-container>
+  </div>
+
+</div>

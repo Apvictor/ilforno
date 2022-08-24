@@ -1,0 +1,62 @@
+<ion-content>
+
+    <div class="header">
+        <div class="top-buttons">
+            <div class="buttons back" (click)="goToScreen()">
+                <ion-icon name="chevron-back"></ion-icon>
+            </div>
+            <div class="texts" [style]="">
+
+                <ng-container>
+                    <p class="text-title">
+                        Meu Pedido
+                    </p>
+                </ng-container>
+
+            </div>
+            <div class="buttons cart">
+                <div class="count">{{accountsService.cartItemCount.value}}</div>
+                <ion-icon name="cart"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="total">
+        <div class="total-texts">
+            <p>Total</p>
+            <p class="total-price">{{this.accountsService.cartItemTotal.value | moneyBr}}</p>
+        </div>
+        <p>Realizar o pagamento no caixa</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card" *ngFor="let produto of accounts.products">
+            <div class="card-photo"
+                [style]="'background: url('+produto.image+'); margin-right: 15px; background-size: cover; background-color: white; background-position: center; background-repeat: no-repeat; border-radius: 10px;'">
+            </div>
+            <div class="card-infos">
+                <div class="texts text-wrap">
+                    <p>{{produto.name}}</p>
+                    <p class="price">{{produto.price | moneyBr}}</p>
+                </div>
+                <div class="card-infos-price-and-qtde">
+                    <div class="buttons-qtde">
+                        <ion-icon id="less-1" (click)="buttonLess(produto)" class="button-less " name="remove-circle">
+                        </ion-icon>
+                        <p>{{produto.amount}}</p>
+                        <ion-icon id="more" (click)="buttonMore(produto)" class="button-more" name="add-circle">
+                        </ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-cart">
+        <ion-button disabled="{{accountsService.cartItemCount.value > 0 ? 'false' : 'true'}}" (click)="addOrder()">
+            Concluir Pedido
+        </ion-button>
+    </div>
+
+</ion-content>

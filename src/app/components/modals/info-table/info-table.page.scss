@@ -1,0 +1,61 @@
+.content {
+    margin-top: 50px;
+    background-color: rgba(215, 215, 215);
+    border-radius: 20px 20px 0 0;
+    height: 100%;
+    overflow-y: scroll;
+
+    .content-header {
+        text-align: center;
+        padding-top: 20px;
+        color: black;
+
+        p {
+            font-size: 30px;
+            font-family: 'AlfaSlabOne';
+        }
+    }
+
+    .content-form {
+        height: 80%;
+        margin: 20px 20px 20px;
+
+        ion-item {
+            margin-top: 20px;
+            border-radius: 10px;
+            --background: white;
+
+            ion-input {
+                --placeholder-color: gray;
+                font-family: system-ui;
+            }
+
+            ion-select {
+                --placeholder-color: gray;
+                font-family: system-ui;
+            }
+        }
+
+        .button-send {
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+
+            ion-button {
+                width: 100%;
+
+                --background: #eb445a;
+                --border-radius: 20px;
+                text-transform: none;
+                font-family: 'AlfaSlabOne';
+                color: #fff;
+                font-size: larger;
+            }
+        }
+    }
+}
+
+.msgError {
+    color: #000;
+    text-align: center;
+}

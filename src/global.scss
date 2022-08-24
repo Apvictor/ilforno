@@ -1,0 +1,78 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+// STYLES
+* {
+    p {
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+// Modal
+.modal-config {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    --background: transparent !important;
+
+    .modal-wrapper {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        --background: transparent !important;
+    }
+}
+
+// MENSAGEM DE ERRO
+.msgError {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 129, 97, 0.397);
+    border-radius: 5px;
+}
+
+.disabled {
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+// FONTS
+@font-face {
+    font-family: 'AlfaSlabOne';
+    src: url('assets/fonts/AlfaSlabOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('assets/fonts/Satisfy-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'LilitaOne';
+    src: url('assets/fonts/LilitaOne-Regular.ttf');
+}

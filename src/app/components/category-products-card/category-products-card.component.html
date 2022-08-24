@@ -1,0 +1,30 @@
+<div class="cards" *ngIf="terminouDeCarregar">
+
+  <div class="card" *ngFor="let produto of produtos">
+    <div class="card-photo" [style]="'background-image: url('+produto.image+');'"></div>
+    <div class="card-infos">
+      <div class="card-infos-title text-wrap">
+        <p>{{produto.name}}</p>
+      </div>
+      <div class="card-infos-price-and-qtde">
+        <p class="price">{{produto.price | moneyBr}}</p>
+        <div class="buttons-qtde">
+          <ion-icon id="less-{{produto.id}}" class="button-less {{ produto.amount === 0 ? 'disabled' : '' }}"
+            name="remove-circle" (click)="buttonLess(produto)">
+          </ion-icon>
+          <p>{{produto.amount}}</p>
+          <ion-icon id="more" class="button-more" name="add-circle" (click)="buttonMore(produto)"></ion-icon>
+        </div>
+      </div>
+      <div class="card-infos-description text-wrap">
+        <p>{{produto.description}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="button-cart">
+  <ion-button disabled="{{accountsService.cartItemCount.value > 0 ? 'false' : 'true'}}" (click)="addCart()">Ver Carrinho
+  </ion-button>
+</div>

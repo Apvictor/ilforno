@@ -1,0 +1,65 @@
+<div class="content">
+  <div class="content-header">
+    <p>Informações da Mesa</p>
+  </div>
+
+  <div class="content-form">
+    <form [formGroup]="createForm">
+
+      <ion-item color="dark" lines="none">
+        <ion-label position="floating">Nome do Cliente</ion-label>
+        <ion-input formControlName="customer" placeholder="Nome do Cliente"></ion-input>
+      </ion-item>
+      <div *ngIf="controlForm.customer.touched && controlForm.customer.invalid">
+        <div class="msgError">O campo Nome é obrigatório!</div>
+      </div>
+
+      <ion-item color="dark" lines="none">
+        <ion-label position="floating">Nº Mesa</ion-label>
+        <ion-select formControlName="tableId" name="select" value="1" (ionChange)="numberOfTable($event)"
+          interface="popover" placeholder="Selecione Nº Mesa">
+          <ion-select-option *ngFor="let mesa of mesas" [value]="mesa.id">
+            {{mesa.id}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div *ngIf="controlForm.tableId.touched && controlForm.tableId.invalid">
+        <div class="msgError">O campo Nº Mesa é obrigatório!</div>
+      </div>
+
+      <ion-item color="dark" lines="none">
+        <ion-label type="number" position="floating">Nº Pessoas</ion-label>
+        <ion-select formControlName="amountOfPeople" name="select" (ionChange)="numberOfPeople($event)"
+          interface="popover" placeholder="Selecione Nº Pessoas">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div *ngIf="controlForm.amountOfPeople.touched && controlForm.amountOfPeople.invalid">
+        <div class="msgError">O campo Nº Pessoas é obrigatório!</div>
+      </div>
+
+      <ion-item color="dark" lines="none" *ngIf="sufficientChairs">
+        <ion-label position="floating">Nº Cadeiras</ion-label>
+        <ion-select formControlName="moreChairs" interface="popover" placeholder="Selecione Nº Cadeiras">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div *ngIf="controlForm.moreChairs.touched && controlForm.moreChairs.invalid">
+        <div class="msgError">O campo Nº Cadeiras é obrigatório!</div>
+      </div>
+
+      <div class="button-send">
+        <ion-button [disabled]="!createForm.valid" (click)="createCustomer()">Enviar</ion-button>
+      </div>
+
+    </form>
+  </div>
+</div>
