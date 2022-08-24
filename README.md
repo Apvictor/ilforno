@@ -1,4 +1,4 @@
-## Projeto desenvolvido **ilforno**. Com algumas mudanças.
+## Projeto desenvolvido **ilforno**.
 
 [Inspiração](https://www.behance.net/gallery/146706353/ilForno-restaurant)
 
